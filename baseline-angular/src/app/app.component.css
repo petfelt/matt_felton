@@ -1,0 +1,12 @@
+.top-spacer{
+	display: block;
+	margin-top: 50px;
+}
+
+flash-messages{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 9999;
+	opacity: 0.9;
+}

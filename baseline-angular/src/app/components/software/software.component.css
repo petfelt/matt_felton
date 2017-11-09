@@ -1,0 +1,78 @@
+.header-text{
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.liner{
+  margin-top: 0px;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+.liner-left{
+  border-left: 1px solid rgba(220,220,220,0.5);
+}
+.liner-top{
+  margin-top: 0px;
+  border-top: 1px solid rgba(220,220,220,0.5);
+}
+.xpendx-title{
+  margin-left: 18.5px;
+  margin-bottom: 5px;
+}
+.xpendx-img{
+  width: 130px;
+  height: 132px;
+  margin-left: 3.5px;
+  margin-bottom: 5px;
+}
+.mini-description-spacer{
+  /*margin-top: 60px;*/
+  margin-left: 19px;
+}
+h3{
+  margin-top: 30px;
+}
+#first-title{
+  margin-top:26.25px;
+}
+.next-vertical-spacer{
+  margin-bottom: 35px;
+}
+
+
+/* Button CSS */
+.btn-custom{
+  text-align: center;
+  vertical-align: middle;
+  display:inline-block;
+  font-size:1.1em;
+  color: white;
+  text-decoration: none;
+  border: 0px;
+  background-color: rgb(23,127,233);
+  border-radius: 15px;
+  padding: 7px 12px 7px 12px;
+  margin-bottom: 10px;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.btn-custom:hover {
+  background-color: rgb(43,147,253);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#btn-website{
+  /* If it is a link */
+  margin-left: 29.5px;
+  /* If it is a button */
+  /*margin-left: 14.5px;*/
+}
+#btn-download{
+  margin-left: 21.25px;
+}

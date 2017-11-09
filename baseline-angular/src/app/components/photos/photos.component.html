@@ -1,0 +1,76 @@
+<div class="custom-background">
+  <div class="container liner">
+    <h1 class="header-text">Photography</h1>
+  </div>
+
+  <div class="container">
+      <div class="screen">
+        <!-- Have navigation arrows, style borrowed from carousel. -->
+        <a class="left carousel-control mouse-pointer arrows"
+        (click)="updateLeft()">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+        <a class="right carousel-control mouse-pointer arrows"
+        (click)="updateRight()">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+      <div class="col-xs-12">
+      <!-- Make sure an active image exists before doing anything with it. -->
+        <div *ngIf="activeImage">
+          <!-- Desktop active image. -->
+          <div unselectable="on" class="hidden-xs noSelect">
+            <cl-image [public-id]="activeImage.public_id" class="imgThumbnail"
+            > <cl-transformation height="400" crop="limit"
+            ></cl-transformation> </cl-image>
+          </div>
+
+          <!-- Mobile active image. -->
+          <div unselectable="on" class="visible-xs-inline-block noSelect">
+            <cl-image [public-id]="activeImage.public_id" class="imgThumbnail"
+            > <cl-transformation width="360" height="400" crop="limit"
+            ></cl-transformation> </cl-image>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Image title and caption. -->
+    <div *ngIf="activeImage">
+      <div *ngIf="activeImage.context.custom.name">
+        <h3 class="wrap-fix">{{activeImage.context.custom.name}}</h3>
+      </div>
+      <div *ngIf="activeImage.context.custom.caption">
+        <p class="wrap-fix">{{activeImage.context.custom.caption}}</p>
+      </div>
+    </div>
+    <div *ngIf="!activeImage">
+      <h3 class="wrap-fix">Loading images...</h3>
+      <p class="wrap-fix">Please wait.</p>
+    </div>
+  </div>
+
+
+  <div class="container bottom-space">
+        <p *ngIf="errorOccurred">No photos have been added yet, or an error occurred loading the photos. Please try again later.</p>
+        <p *ngIf="photos.length === 0 | async">No photos have been added yet.</p>
+          <div class="col-xs-12 one-thumb" *ngFor="let photo of photos | async; let i = index">
+            <!-- | orderBy:'version':true -->
+            <!-- <a clHref={{photo.public_id}} format="jpg" target="_blank"> -->
+                <cl-image
+                        public-id={{photo.public_id}}
+                        (mouseenter)="photo.isMouseOver = true"
+                        (mouseleave)="photo.isMouseOver = false"
+                        [attr.opacity]="photo.isMouseOver ? '50' : null"
+                        class="mouse-pointer"
+                        (click)="updateListLocation(i)"
+                ><cl-transformation
+                height="150" width="150" crop="fill" radius="20" background="#37373d"></cl-transformation>
+                </cl-image>
+                <!-- <h3 class="photo-title" *ngIf="photo.context">{{photo.context.custom.name}}</h3>
+                <p class="text-center" *ngIf="photo.context">{{photo.context.custom.caption}}</p> -->
+            <!-- </a> -->
+        </div>
+        <!-- <div class="col-xs-12">
+            If you want some text down here, make sure it has this class.
+        </div> -->
+  </div>
+</div>

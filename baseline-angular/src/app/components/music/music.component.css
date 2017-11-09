@@ -1,0 +1,128 @@
+.custom-background{
+  background-color: rgba(55,55,61,1);
+  padding-bottom: 90px;
+}
+.custom-fade-background{
+  /* This is if you want the fade background */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+0,28343b+100 */
+  background: rgb(181,189,200); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(181,189,200,1) 0%, rgba(130,140,149,1) 0%, rgba(40,52,59,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(130,140,149,1) 0%,rgba(40,52,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(181,189,200,1) 0%,rgba(130,140,149,1) 0%,rgba(40,52,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+  background-color: rgba(55,55,61,1);
+  padding-bottom: 60px;
+}
+
+.custom-background h1,h2,h5{
+  color: rgba(220,220,220,1);
+}
+.header-text{
+  color: rgba(220,220,220,1);
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.liner{
+  margin-top: 0px;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+.cd-cover{
+  width: 190px;
+  height: 190px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 10px rgba(34,34,34,0.4);
+  opacity: 1.0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.cd-cover:hover{
+  opacity: 0.9;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.album-title{
+  margin-bottom: 0px;
+}
+.album-authors{
+  margin-top: 5px;
+}
+.vertical-spacer-liner{
+  margin-top: 60px;
+}
+.vertical-spacer{
+  margin-top: 30px;
+}
+
+
+/* Button CSS */
+.btn-custom{
+  text-align: center;
+  vertical-align: middle;
+  display:block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  font-size:1.1em;
+  color: white;
+  text-decoration: none;
+  border: 0px;
+  background-color: rgb(23,127,233);
+  border-radius: 15px;
+  padding: 7px 12px 7px 12px;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.btn-custom:hover {
+  background-color: rgb(43,147,253);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* If we want. */
+.btn-custom-mini{
+  text-align: center;
+  vertical-align: middle;
+  display:block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  font-size:1em;
+  color: white;
+  text-decoration: none;
+  border: 0px;
+  background-color: rgb(23,127,233);
+  border-radius: 15px;
+  padding: 7px 0px 7px 0px;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.btn-custom-mini:hover {
+  background-color: rgb(43,147,253);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}

@@ -1,0 +1,59 @@
+.my-drop-zone{
+  width: 100%;
+  margin: 10px 0px 30px 0px;
+  border: dotted 3px lightgray;
+  padding: 70px 0px 70px 0px;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+}
+
+.my-drop-zone:hover{
+  border: dotted 3px red;
+}
+
+/* Doesn't work with new upload system. Now use hover instead. */
+.nv-file-over{
+  border: dotted 3px red;
+} /* Default class applied to drop zones on over */
+
+.imgThumbnail{
+    padding: 4px;
+}
+
+.header-text{
+  display: inline;
+}
+
+.manage-text{
+  margin-left: 50px;
+  white-space: pre;
+}
+
+.liner{
+  margin-top: 0px;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+
+.top-spacer{
+  margin-top: 50px;
+  width: 100%;
+}
+
+.bottom-spacer{
+  margin-bottom: 50px;
+}
+
+.form_line{
+  margin-bottom: 15px;
+}
+
+.green-text{
+  color: rgb(62,174,92);
+  word-wrap: break-word;
+}
+
+.preview-image{
+  width: 150px;
+  height: 150px;
+}

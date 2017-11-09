@@ -1,0 +1,45 @@
+.custom-background{
+  background-color: rgb(55,55,61);
+  padding-bottom: 60px;
+  z-index: -1;
+}
+.custom-background h3,p {
+  color: rgb(220,220,220);
+}
+.header-text{
+  color: rgb(220,220,220);
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.liner{
+  margin-top: 0px;
+  margin-bottom: 26.25px;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+.img-holder{
+  width: 80%;
+  height: 80%;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(55,55,61,1);
+}
+.img-holder img{
+  max-width: 100%;
+  max-height: 100%;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+p{
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.first-title{
+  margin-top: 30px;
+}

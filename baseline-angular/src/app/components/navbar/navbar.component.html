@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/']"><b>Matthew Felton</b></a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <!-- <li [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li> -->
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li> -->
+        <!-- <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">Login</a></li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">Register</a></li> -->
+
+        <!-- Have hidden & visible xs links for mobile nonmobile - so flickering is avoided when collapsing menu on desktop. -->
+        <li class="hidden-xs" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/upload']">Upload</a></li>
+        <li class="visible-xs" *ngIf="authService.loggedIn()" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/upload']">Upload Images</a></li>
+
+        <li class="hidden-xs" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/photography']">Photography</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/photography']">Photography</a></li>
+
+        <li class="hidden-xs" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/art']">Art</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/art']">Art</a></li>
+
+        <li class="hidden-xs" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/music']">Music</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/music']">Music</a></li>
+
+        <li class="hidden-xs" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/software']">Software</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/software']">Software</a></li>
+
+        <li id="new-site-link" class="hidden-xs"><a href="http://www.instagram.com/matthewfeltonart">News</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse"><a href="http://www.instagram.com/matthewfeltonart">News</a></li>
+
+        <li class="hidden-xs" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/about']">Bio</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/about']">Bio</a></li>
+
+        <li class="hidden-xs" *ngIf="authService.loggedIn()" ><a (click)="onLogoutClick()" href="#">Logout</a></li>
+        <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" *ngIf="authService.loggedIn()" ><a (click)="onLogoutClick()" href="#">Logout</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<!-- Close mobile menu on touch of menu item. -->
+<script type="text/javascript">
+$(document).ready(function () {
+  $("nav").find("li").on("click", "a", function () {
+      $('.navbar-collapse.in').collapse('hide');
+  });
+});
+</script>

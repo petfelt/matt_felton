@@ -1,0 +1,95 @@
+<div class="container bottom-spacer">
+    <div class="top-spacer"></div>
+  	<h1 class="header-text">Upload An Image</h1>
+    <a class="manage-text" href="https://cloudinary.com/console/media_library" target="_blank">Manage Images</a>
+    <!-- If you want only one img at a time dropped. -->
+    <!-- <div id="direct_upload" *ngIf="uploader.queue.length == 0" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" class="my-drop-zone text-center">Drop an image here.</div> -->
+    <!-- Old "Just file drop" version. -->
+    <!-- <div id="direct_upload" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" class="my-drop-zone text-center">Drop an image here.</div> -->
+
+    <!-- So you can drop or click for file upload. -->
+    <label id="direct_upload" for="uploader-input" ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader" class="my-drop-zone">Drop an image here, or click to select an image.</label>
+    <input type="file" ng2FileSelect [uploader]="uploader" id="uploader-input" style="display:none" />
+
+    <div class="alert alert-info alert-dismissable" *ngIf="uploader.queue.length > 0">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <p class="text-center"><strong>Be Careful!</strong> Each image will upload with the name, caption, etc. you last edited. Therefore, it is recommended that you input information for each image ONE AT A TIME, IN ORDER. Including choosing the art or photography page. Then hit upload and continue.</p>
+    </div>
+    <form *ngFor="let item of uploader.queue">
+      <h3>Edit Information For {{ item?.file?.name }}:</h3>
+  		<div class="form_line">
+  			<label path="title">Title:</label>
+  			<div class="form_controls">
+  				<input type="text" class="form-control" maxlength="1024" #title placeholder="Untitled" (keyup.enter)="updateTitle(title.value)" (blur)="updateTitle(title.value)"
+  				/>
+  			</div>
+  		</div>
+      <div class="form_line">
+  			<label path="caption">Caption:</label>
+  			<div class="form_controls">
+  				<input type="text" class="form-control" maxlength="1024" #caption placeholder="My untitled work." (keyup.enter)="updateCaption(caption.value)" (blur)="updateCaption(caption.value)"
+  				/>
+  			</div>
+  		</div>
+      <div class="form_line">
+  			<label path="gallery">Gallery:</label>
+  			<div class="form_controls">
+  				<input type="text" class="form-control" maxlength="255" #gallery placeholder="Default Gallery" (keyup.enter)="updateGallery(gallery.value)" (blur)="updateGallery(gallery.value)"
+  				/>
+  			</div>
+  		</div>
+      <div class="form_line">
+  			<label path="page">Page:</label>
+  			<div class="form_controls">
+  				<input type="radio" name="page" value="Photo" checked (keyup.enter)="updatePage('photo')" (blur)="updatePage('photo')"/>Photo
+          <input type="radio" name="page" value="Art" (keyup.enter)="updatePage('art')" (blur)="updatePage('art')"/>Art
+  			</div>
+  		</div>
+      <button type="button" class="btn btn-success btn-xs"
+          (click)="item.upload()"
+          [disabled]="item.isReady || item.isUploading || item.isSuccess">
+          <span class="glyphicon glyphicon-upload"></span> Upload
+      </button>
+  	</form>
+  	<div class="file" *ngFor="let response of responses; let i = index">
+      <div class="status form_line">
+        <h3>{{response.file.name}}:</h3>
+        <div *ngFor="let property of getFileProperties(response.data)">
+          <div *ngIf="property.key == 'context'">
+            <h4>Title: <span class="green-text">{{property.value.custom.name | json}}</span></h4>
+            <h4>Caption: <span class="green-text">{{property.value.custom.caption | json}}</span></h4>
+          </div>
+        </div>
+        Uploading... {{response.progress}}%
+  			<div *ngIf="!response.status">In progress...</div>
+  			<div class="status-code" *ngIf="response.status">Taking final steps...If it stops here, the upload failed...
+          <div *ngFor="let property of getFileProperties(response.data)">
+            <div *ngIf="property.key == 'context'">
+                <p class="form_line green-text"><b>{{property.value.custom.name | json}} ({{response.file.name}})</b> was uploaded successfully!</p>
+                <div class="alert alert-warning alert-dismissable" *ngIf="!!response.data.delete_token">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <p class="text-center">You have <strong>10 minutes</strong> to delete the image from this page. After 10 minutes, you have to delete it through Cloudinary.</p>
+                </div>
+                <button class="delete-image btn-danger form_line" *ngIf="!!response.data.delete_token" (click)="deleteImage(response.data, i)">Delete image</button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="status-code" *ngIf="response.status">Upload completed with status code {{response.status}}</div> -->
+  		</div>
+  		<div class="form_line">
+  			<div class="form_controls">
+  				<div class="preview">
+  					<!-- Consider using https://github.com/valor-software/ng2-file-upload/issues/461 for image preview -->
+  				</div>
+  			</div>
+  		</div>
+  		<!-- <div class="info">
+  			<table>
+  				<tr *ngFor="let property of getFileProperties(response.data)">
+  					<td> {{ property.key }} </td>
+  					<td> {{ property.value | json}} </td>
+  				</tr>
+  			</table>
+  		</div> -->
+  	</div>
+</div>

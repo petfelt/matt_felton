@@ -1,0 +1,189 @@
+.header-text{
+	color: rgba(220,220,220,1);
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.liner{
+  margin-top: 0px;
+	margin-bottom: 20px;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+.bottom-space{
+	padding-bottom: 15px;
+}
+.custom-background{
+	color: rgb(220,220,220);
+  background-color: rgba(55,55,61,1);
+  padding-bottom: 60px;
+}
+h2{
+	color: rgb(220,220,220);
+}
+h3{
+	color: rgb(220,220,220);
+	margin-top: 22px;
+}
+
+.mouse-pointer:hover {
+	cursor: pointer;
+}
+
+.one-thumb{
+	width: 175px;
+	margin: 12px 0px 12px 0px;
+	text-align: center;
+}
+.photo-title{
+	height: 50px;
+}
+.wrap-fix{
+	word-wrap: break-word;
+	text-align: center;
+}
+
+.screen{
+	text-align: center;
+	height: 390px;
+}
+
+.arrows{
+	z-index: 100;
+	height: 400px;
+	margin-top: 147px;
+	margin-bottom: 0px;
+}
+
+.imgThumbnail{
+	text-align: center;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+
+.imgThumbnailBlur{
+	text-align: center;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	-webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+	opacity: 0.5;
+}
+
+.activeImageName{
+	left: 0;
+	top: 155px;
+	z-index: 99;
+	text-align: center;
+	position:absolute;
+	width: 100%;
+  color: #fff;
+}
+
+.activeImageCaption{
+	left: 0;
+	top: 207px;
+	z-index: 99;
+	text-align: center;
+	position:absolute;
+	width: 100%;
+	color: #fff;
+}
+
+.noSelect{
+	/* To avoid being selectable */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+	/* Carousel Code Stuff */
+.carousel-liner{
+  margin-top: 0px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+.carousel-control{
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.carousel-control:hover{
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.carousel-caption a{
+  /* Stop link from having link underline */
+  text-decoration: none;
+}
+.carousel-caption {
+  margin-bottom: 20px;
+}
+
+
+.text-box{
+  margin-top: 28%;
+}
+.image-box{
+  /*width: 100%;
+  height: 150px;*/
+}
+.image{
+  max-width: 100%;
+  max-height: 100%;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.lower-boxes{
+  width: 49%;
+  height: 150px;
+  display: inline-block;
+}
+
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  .transition-duration: 2s;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}

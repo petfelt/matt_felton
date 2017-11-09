@@ -1,0 +1,14 @@
+
+.navbar-default{
+  margin: 0px;
+  border: 0px;
+}
+
+/* To make "News" button lose appear to lose active link status on return without clicking. */
+/* Small bug fix. */
+#new-site-link a:focus{
+  color: #777777;
+}
+#no-site-link a:hover{
+  color: #333333;
+}
