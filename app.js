@@ -31,9 +31,8 @@ const port = 8000;
 app.use(cors());
 
 // Set static folder
-app.configure(function() {
-  app.use(express.static(path.join(__dirname, 'public')));
-});
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bodyParser.json());
 
 // passport
