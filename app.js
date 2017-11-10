@@ -1,4 +1,5 @@
 const express = require('express');
+const rewriteModule = require('http-rewrite-middleware');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -26,6 +27,18 @@ const users = require('./routes/users');
 
 const port = 8000;
 
+// To fix routing issues with direct linking.
+app.use(rewriteModule.getMiddleware([
+    // ... list of rules here
+    {from: '^/art$', to: '/public/index.html'},
+    {from: '^/photography$', to: '/public/index.html'},
+    {from: '^/music$', to: '/public/index.html'},
+    {from: '^/software$', to: '/public/index.html'},
+    {from: '^/about$', to: '/public/index.html'},
+    {from: '^/login$', to: '/public/index.html'},
+    {from: '^/upload$', to: '/public/index.html'}
+]);
+
 // Allows other domains to "ping" this one.
 app.use(cors());
 
@@ -43,7 +56,7 @@ require('./config/passport')(passport);
 app.use('/users', users);
 
 // Index route
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
   // res.send('Invalid Endpoint');
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
