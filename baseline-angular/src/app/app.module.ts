@@ -73,10 +73,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
     CloudinaryModule.forRoot(cloudinary, CloudinarySettings),
     FileUploadModule,
-    FlashMessagesModule
+    FlashMessagesModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [ValidateService, AuthService, AuthGuard, PhotoAlbumService],
   bootstrap: [AppComponent]
