@@ -1,3 +1,4 @@
 # self: hidden files
 /node_modules
 /config
+/public
