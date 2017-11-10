@@ -30,9 +30,6 @@ const port = 8000;
 // Allows other domains to "ping" this one.
 app.use(cors());
 
-// Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(bodyParser.json());
 
 // passport
@@ -47,8 +44,11 @@ app.use('/users', users);
 app.get('*', (req, res, next) => {
   // res.send('Invalid Endpoint');
   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  response.sendfile(__dirname + '/public/index.html');
+  response.sendfile(__dirname + '/index.html');
 });
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
   console.log('Server started on port '+port);
