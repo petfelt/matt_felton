@@ -37,7 +37,7 @@ app.use(rewriteModule.getMiddleware([
     {from: '^/about$', to: '/public/index.html'},
     {from: '^/login$', to: '/public/index.html'},
     {from: '^/upload$', to: '/public/index.html'}
-]);
+]));
 
 // Allows other domains to "ping" this one.
 app.use(cors());
