@@ -20,10 +20,6 @@ mongoose.connection.on('error', (err) => {
   console.log('Database error: '+err.message);
 });
 
-function sendSpaFileIfUnmatched(req,res){
-  res.sendFile("index.html", { root: '.'});
-}
-
 const app = express();
 
 const users = require('./routes/users');
@@ -46,7 +42,6 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 app.use('/users', users);
-app.use(sendSpaFileIfUnmatched);
 
 // Index route
 app.get('/', (req, res, next) => {
