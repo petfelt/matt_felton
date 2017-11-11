@@ -20,6 +20,10 @@ mongoose.connection.on('error', (err) => {
   console.log('Database error: '+err.message);
 });
 
+function sendSpaFileIfUnmatched(req,res){
+  res.sendFile("index.html", { root: '.'});
+}
+
 const app = express();
 
 const users = require('./routes/users');
@@ -32,6 +36,9 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // passport
 app.use(passport.initialize());
 app.use(passport.session());
@@ -39,16 +46,15 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 app.use('/users', users);
+app.use(sendSpaFileIfUnmatched);
 
 // Index route
-app.get('*', (req, res, next) => {
-  // res.send('Invalid Endpoint');
+app.get('/', (req, res, next) => {
+  res.send('Invalid Endpoint');
   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  response.sendfile(__dirname + '/index.html');
+  // response.sendfile(__dirname + '/index.html');
 });
 
-// Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
   console.log('Server started on port '+port);
