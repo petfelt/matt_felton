@@ -43,7 +43,7 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 
-// Routing fix
+// Routing fix: catch all routes and send them to angular index to direct correctly.
 app.get('/*', (req, res, next) => {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
   // response.sendfile(__dirname + '/index.html');
