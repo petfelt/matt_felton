@@ -44,14 +44,46 @@ require('./config/passport')(passport);
 app.use('/users', users);
 
 // Index route
-// app.get('/', (req, res, next) => {
-//   res.send('Invalid Endpoint');
-//   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-//   // response.sendfile(__dirname + '/index.html');
-// });
+app.get('/', (req, res, next) => {
+  res.send('Invalid Endpoint');
+  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
 
-// Routing fix
-app.get('/(.*)$', (req, res, next) => {
+// Routing fix without dynamic pages.
+app.get('/photography', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/art', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/music', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/software', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/xpendx', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/about', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/login', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/upload', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+app.get('/register', (req, res, next) => {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
   // response.sendfile(__dirname + '/index.html');
 });
