@@ -44,13 +44,14 @@ require('./config/passport')(passport);
 app.use('/users', users);
 
 // Index route
-app.get('/', (req, res, next) => {
-  res.send('Invalid Endpoint');
-  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  // response.sendfile(__dirname + '/index.html');
-});
+// app.get('/', (req, res, next) => {
+//   res.send('Invalid Endpoint');
+//   // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+//   // response.sendfile(__dirname + '/index.html');
+// });
 
-app.get('/photography', (req, res, next) => {
+// Routing fix
+app.get('/(.*)$', (req, res, next) => {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
   // response.sendfile(__dirname + '/index.html');
 });
