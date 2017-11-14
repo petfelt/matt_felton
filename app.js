@@ -50,6 +50,11 @@ app.get('/', (req, res, next) => {
   // response.sendfile(__dirname + '/index.html');
 });
 
+app.get('/photography', (req, res, next) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // response.sendfile(__dirname + '/index.html');
+});
+
 
 app.listen(port, () => {
   console.log('Server started on port '+port);
