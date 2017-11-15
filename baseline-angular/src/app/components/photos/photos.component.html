@@ -14,7 +14,7 @@
         (click)="updateRight()">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         </a>
-      <div class="col-xs-12" ng-swipe-left="updateLeft()" ng-swipe-right="updateRight()">
+      <div class="col-xs-12" ng-swipe-left="swipe($event)" ng-swipe-right="updateRight()">
       <!-- Make sure an active image exists before doing anything with it. -->
         <div *ngIf="activeImage">
           <!-- Desktop active image. -->
@@ -75,6 +75,7 @@
   </div>
 </div>
 
+<!-- Swipe attempt - still not working. -->
 <script>
 import { module, bootstrap } from 'angular';
 import swipe from 'angular-swipe';
