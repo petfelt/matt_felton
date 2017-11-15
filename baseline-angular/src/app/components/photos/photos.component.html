@@ -1,4 +1,4 @@
-<div class="custom-background">
+<div class="custom-background" ng-controller="SwipeController">
   <div class="container liner">
     <h1 class="header-text">Photography</h1>
   </div>
@@ -14,7 +14,7 @@
         (click)="updateRight()">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         </a>
-      <div class="col-xs-12">
+      <div class="col-xs-12" ng-swipe-left="updateLeft()" ng-swipe-right="updateRight()">
       <!-- Make sure an active image exists before doing anything with it. -->
         <div *ngIf="activeImage">
           <!-- Desktop active image. -->
@@ -74,3 +74,12 @@
         </div> -->
   </div>
 </div>
+
+<script>
+import { module, bootstrap } from 'angular';
+import swipe from 'angular-swipe';
+module('app', [ swipe.name ])
+    .controller('SwipeController', $scope => {
+      $scope.swipe = $event => console.log($event);
+    })
+</script>
