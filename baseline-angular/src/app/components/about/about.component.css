@@ -18,10 +18,11 @@
   border-bottom: 1px solid rgba(220,220,220,0.5);
 }
 .img-holder{
+  color: lightgrey;
   display: block;
   text-align: center;
   width: 87%;
-  height: 87%;
+  height: auto;
   margin: 0 auto;
   background-color: rgb(55,55,61);
 }
