@@ -45,7 +45,11 @@ app.use('/users', users);
 
 // Routing fix: catch all routes and send them to angular index to direct correctly.
 app.get('/*', (req, res, next) => {
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  try {
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  } catch {
+    res.write("The website is currently updating. Wait a few seconds and then refresh your page.");
+  }
   // response.sendfile(__dirname + '/index.html');
 });
 
