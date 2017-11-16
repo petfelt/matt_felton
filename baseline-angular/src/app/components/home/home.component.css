@@ -1,5 +1,6 @@
 .custom-background {
-  background-color: white;
+  /* I don't think we want it white here. */
+  /*background-color: white;*/
 }
 
 /* Button code */
