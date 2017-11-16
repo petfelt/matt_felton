@@ -69,7 +69,7 @@ export class AuthService {
     if(this.isDev){
       return 'http://localhost:8000/'+ep;
     } else {
-      return 'http://localhost:27017/'+ep;
+      return 'http://localhost:8000/'+ep;
     }
   }
 
