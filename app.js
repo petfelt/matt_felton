@@ -51,9 +51,9 @@ app.get('/*', (req, res, next) => {
 // Error handling.
 app.use(function(err, req, res, next) {
   // This is important when updating the site via ng build.
-  // send back a 205 AkA Reset Content code.
-  res.status(205);
-  res.send('The website is currently updating. Wait a moment and then refresh your page.');
+  // Tell the user that the website is updating and to refresh soon.
+  res.status(500);
+  res.send('The website is currently updating. Wait a few moments and then refresh your page.');
 });
 
 
