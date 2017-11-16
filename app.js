@@ -45,27 +45,15 @@ app.use('/users', users);
 
 // Routing fix: catch all routes and send them to angular index to direct correctly.
 app.get('/*', (req, res, next) => {
-  // try {
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
-  // } catch {
-  //   res.write("The website is currently updating. Wait a few seconds and then refresh your page.");
-  //   res.end();
-  // }
-  // response.sendfile(__dirname + '/index.html');
 });
 
 // Error handling.
 app.use(function(err, req, res, next) {
-  // log the error, treat it like a 500 internal server error
-  // maybe also log the request so you have more debug information
-  //log.error(err, req);
-
-  // during development you may want to print the errors to your console
-  //console.log(err.stack);
-
-  // send back a 500 with a generic message
-  res.status(500);
-  res.send('oops! something broke.');
+  // This is important when updating the site via ng build.
+  // send back a 205 AkA Reset Content code.
+  res.status(205);
+  res.send('The website is currently updating. Wait a moment and then refresh your page.');
 });
 
 
