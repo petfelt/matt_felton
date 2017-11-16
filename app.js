@@ -49,6 +49,7 @@ app.get('/*', (req, res, next) => {
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
   } catch {
     res.write("The website is currently updating. Wait a few seconds and then refresh your page.");
+    res.end();
   }
   // response.sendfile(__dirname + '/index.html');
 });
