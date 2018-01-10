@@ -12,10 +12,10 @@ import {Photo} from '../../services/photo';
 export class HomeComponent implements OnInit {
   private photos: Observable<Photo[]>;
   private arts: Observable<Photo[]>;
-  private photoImage = "http://res.cloudinary.com/petfelt/image/list/photo.json";
-  private artImage = "http://res.cloudinary.com/petfelt/image/list/photo.json";
-  // private photoImage = "http://res.cloudinary.com/petfelt/image/upload/art5_dcaiyg";
-  // private artImage = "http://res.cloudinary.com/petfelt/image/upload/art1_s9novw";
+  private photoImage = "http://res.cloudinary.com/mattfelt/image/list/photo.json";
+  private artImage = "http://res.cloudinary.com/mattfelt/image/list/photo.json";
+  // private photoImage = "http://res.cloudinary.com/mattfelt/image/upload/art5_dcaiyg";
+  // private artImage = "http://res.cloudinary.com/mattfelt/image/upload/art1_s9novw";
 
   private subscription: ISubscription;
   private subscription2: ISubscription;
@@ -39,14 +39,14 @@ export class HomeComponent implements OnInit {
   updatePhotoImage(): void {
     // console.log(index);
     this.subscription = this.photos.subscribe(
-      x => (this.photoImage = "http://res.cloudinary.com/petfelt/image/upload/"+x[0].public_id));
+      x => (this.photoImage = "http://res.cloudinary.com/mattfelt/image/upload/"+x[0].public_id));
     // console.log(this.photos);
   }
 
   updateArtImage(): void {
     // console.log(index);
     this.subscription2 = this.arts.subscribe(
-      x => (this.artImage = "http://res.cloudinary.com/petfelt/image/upload/"+x[0].public_id));
+      x => (this.artImage = "http://res.cloudinary.com/mattfelt/image/upload/"+x[0].public_id));
     // console.log(this.photos);
   }
 
