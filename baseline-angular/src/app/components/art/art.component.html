@@ -33,11 +33,13 @@
     </div>
     <!-- Image title and caption. -->
     <div *ngIf="activeImage">
-      <div *ngIf="activeImage.context.custom.name">
-        <h3 class="wrap-fix">{{activeImage.context.custom.name}}</h3>
-      </div>
-      <div *ngIf="activeImage.context.custom.caption">
-        <p class="wrap-fix">{{activeImage.context.custom.caption}}</p>
+      <div *ngIf="activeImage.context">
+        <div *ngIf="activeImage.context.custom.name">
+          <h3 class="wrap-fix">{{activeImage.context.custom.name}}</h3>
+        </div>
+        <div *ngIf="activeImage.context.custom.caption">
+          <p class="wrap-fix">{{activeImage.context.custom.caption}}</p>
+        </div>
       </div>
     </div>
     <div *ngIf="!activeImage">
