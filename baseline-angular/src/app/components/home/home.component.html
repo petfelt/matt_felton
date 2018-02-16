@@ -2,45 +2,28 @@
   <div class="parallax-title">
     <div class="title-box">
       <h1 class="title-text">Matthew Felton</h1>
-      <p class="subtitle-text">Photography — Art — Music — Software</p>
+      <p class="subtitle-text"><span [routerLink]="['/photography']">Photography</span> —
+        <span [routerLink]="['/art']">Art</span> —
+        <span [routerLink]="['/music']">Music</span> —
+        <span [routerLink]="['/software']">Software</span></p>
     </div>
   </div>
-  <div class="overlap-spacer"></div>
-  <div [ngStyle]="{'background-image': 'url('+photoImage+')'}" class="parallax-photo parallax" [routerLink]="['/photography']">
-    <div class="container">
+  <div class="parallax-container">
+    <div [ngStyle]="{'background-image': 'url('+photoImage+')'}" class="parallax-photo parallax" [routerLink]="['/photography']">
       <h2 class="overlap-title">Photography</h2>
-      <div class="overlap-button">
-        <a class="btn-custom" [routerLink]="['/photography']">See More</a>
-      </div>
     </div>
-  </div>
-  <div class="overlap-spacer"></div>
-  <!-- <div *ngIf="artImage"> -->
     <div [ngStyle]="{'background-image': 'url('+artImage+')'}" class="parallax-art parallax" [routerLink]="['/art']">
-      <div class="container">
-        <h2 class="overlap-title">Art</h2>
-        <div class="overlap-button">
-          <a class="btn-custom" [routerLink]="['/art']">See More</a>
-        </div>
-      </div>
+      <h2 class="overlap-title">Art</h2>
     </div>
-  <!-- </div> -->
-  <div class="overlap-spacer"></div>
-  <div class="parallax-music parallax" [routerLink]="['/music']">
-    <div class="container">
+    <div style="clear: both">
+
+    </div>
+    <div class="parallax-music parallax" [routerLink]="['/music']">
       <h2 class="overlap-title">Music</h2>
-      <div class="overlap-button">
-        <a class="btn-custom" [routerLink]="['/music']">See More</a>
-      </div>
     </div>
-  </div>
-  <div class="overlap-spacer"></div>
-  <div class="parallax-software parallax" [routerLink]="['/software']">
-    <div class="container">
+    <div class="parallax-software parallax" [routerLink]="['/software']">
       <h2 class="overlap-title">Software</h2>
-      <div class="overlap-button">
-        <a class="btn-custom" [routerLink]="['/software']">See More</a>
-      </div>
     </div>
   </div>
+  <div class="container"></div>
 </div>
