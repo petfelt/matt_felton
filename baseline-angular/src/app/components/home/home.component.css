@@ -111,6 +111,7 @@ p{
       /* Set a specific height, change margin small amount. */
       width: 100%;
       margin: 6px;
+      background-color: rgb(56,56,61);
   }
 }
 
@@ -144,7 +145,7 @@ p{
 
 .parallax-music {
     /* The image used */
-    background-image: url("/assets/home/music-grid.jpg");
+    background-image: linear-gradient( rgba(56,56,61,.4), rgba(56,56,61,.4) ), url("/assets/home/music-grid.jpg");
     opacity: 1;
 }
 .parallax-music:hover{
@@ -159,7 +160,7 @@ p{
 
 .parallax-software {
     /* The image used */
-    background-image: url("/assets/home/xpendx-grid.jpg");
+    background-image: linear-gradient( rgba(56,56,61,.4), rgba(56,56,61,.4) ), url("/assets/home/xpendx-grid.jpg");
     opacity: 1;
 }
 .parallax-software:hover{
