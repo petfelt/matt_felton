@@ -17,7 +17,7 @@
 .parallax-title {
     display: table;
     text-shadow: 0px 1px 2px rgb(102,102,102);
-    /* background-color: rgba(102,102,102,0.5); */
+    background-color: rgba(102,102,102,0.3);
 
     /* Set a specific height */
     height: 115px;
