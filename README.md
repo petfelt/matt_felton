@@ -12,7 +12,7 @@ A website built for my father using the MEAN stack and Cloudinary. Includes sect
 
 ## Author
 
-* **Peter Amin Felton** - [petfelt](https://github.com/petfelt)
+* **Peter Amin Felton** - [petfelt](https://github.com/petfelt).
 
 ## License
 
