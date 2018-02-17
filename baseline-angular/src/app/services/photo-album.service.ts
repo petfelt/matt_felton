@@ -17,11 +17,6 @@ export class PhotoAlbumService {
         let url = this.cloudinary.url('photo', {
             format: 'json',
             type: 'list',
-            // cache bust (lists are cached by the CDN for 1 minute)
-            // *************************************************************************
-            // Note that this is practice is DISCOURAGED in production code and is here
-            // for demonstration purposes only
-            // *************************************************************************
             version: Math.ceil(new Date().getTime() / 1000)
         });
 
@@ -36,11 +31,6 @@ export class PhotoAlbumService {
         let url = this.cloudinary.url('art', {
             format: 'json',
             type: 'list',
-            // cache bust (lists are cached by the CDN for 1 minute)
-            // *************************************************************************
-            // Note that this is practice is DISCOURAGED in production code and is here
-            // for demonstration purposes only
-            // *************************************************************************
             version: Math.ceil(new Date().getTime() / 1000)
         });
 

@@ -22,7 +22,7 @@
 
         <!-- Have hidden & visible xs links for mobile nonmobile - so flickering is avoided when collapsing menu on desktop. -->
         <li class="hidden-xs" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/upload']">Upload</a></li>
-        <li class="visible-xs" *ngIf="authService.loggedIn()" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/upload']">Upload Images</a></li>
+        <li class="visible-xs" *ngIf="authService.loggedIn()" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/upload']">Upload</a></li>
 
         <li class="hidden-xs" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/photography']">Photography</a></li>
         <li class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/photography']">Photography</a></li>

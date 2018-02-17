@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   private photos: Observable<Photo[]>;
   private arts: Observable<Photo[]>;
   private photoImage = "http://res.cloudinary.com/mattfelt/image/list/photo.json";
-  private artImage = "http://res.cloudinary.com/mattfelt/image/list/photo.json";
+  private artImage = "http://res.cloudinary.com/mattfelt/image/list/art.json";
   // private photoImage = "http://res.cloudinary.com/mattfelt/image/upload/art5_dcaiyg";
   // private artImage = "http://res.cloudinary.com/mattfelt/image/upload/art1_s9novw";
 
