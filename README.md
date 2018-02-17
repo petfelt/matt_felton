@@ -3,6 +3,24 @@ A website built for my father using the MEAN stack and Cloudinary. Includes sect
 
 ### [Live Link.](http://www.matthewfelton.com/)
 
+![Preview Of Photography Page](https://github.com/petfelt/matt_felton/blob/master/media/preview1.png)
+
+## Code Snippet
+
+Custom change of active image using subscriptions and a JSON list compiled through Cloudinary:
+```javascript
+updateLeft(): void {
+  // Do checks to make it loop around.
+  if(this.listLocation > 0){
+    this.listLocation--;
+  } else {
+    this.listLocation = this.listLength;
+  }
+  this.subscription = this.photos.subscribe(
+    x => this.updateActiveImage(x[this.listLocation]));
+}
+```
+
 ## Built With
 
 * [MEAN](http://mean.io/) - Stack used. Comprised of [MongoDB](https://www.mongodb.com/), [Express](https://expressjs.com/), [Angular 4](https://angular.io/), & [NodeJS](https://nodejs.org/en/).
