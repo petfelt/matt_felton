@@ -30,7 +30,7 @@ updateLeft(): void {
 
 ## Author
 
-* **Peter Amin Felton** - [petfelt](https://github.com/petfelt).
+* **Peter Amin Felton** - *Project Development* - [petfelt](https://github.com/petfelt).
 
 ## License
 
