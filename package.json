@@ -19,5 +19,5 @@
     "passport-jwt": "*"
   },
   "author": "Peter F",
-  "license": "ISC"
+  "license": "MIT"
 }
