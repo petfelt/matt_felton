@@ -20,5 +20,5 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Acknowledgments
 
-* My Father - for consistent encouragement.
+* My Father - For consistent encouragement.
 * [Traversy Media](http://traversymedia.com/) - Tutorial videos.
