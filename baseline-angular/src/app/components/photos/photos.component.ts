@@ -84,7 +84,7 @@ export class PhotosComponent implements OnInit {
     }
     smoothScroll(){
       var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      if(currentScroll > 0){
+      while(currentScroll > 0){
         window.requestAnimationFrame(this.smoothScroll);
         window.scrollTo(0,currentScroll - (currentScroll/5));
       }
