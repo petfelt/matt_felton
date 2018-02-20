@@ -49,7 +49,7 @@ export class ArtComponent implements OnInit {
       this.subscription = this.photos.subscribe(
         x => this.updateActiveImage(x[this.listLocation]));
       // Then scroll to top of page.
-      this.scrollToTop(1000);
+      this.scrollToTop(400);
     }
 
     updateRight(): void {
