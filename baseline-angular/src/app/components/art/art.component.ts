@@ -48,6 +48,8 @@ export class ArtComponent implements OnInit {
       //   x => console.log('This image: %s', x[this.listLocation]));
       this.subscription = this.photos.subscribe(
         x => this.updateActiveImage(x[this.listLocation]));
+      // Then scroll to top of page.
+      this.smoothScroll();
     }
 
     updateRight(): void {
@@ -80,5 +82,12 @@ export class ArtComponent implements OnInit {
     returnListLength(length): void {
       this.listLength = (length.length)-1;
       this.subscription2.unsubscribe();
+    }
+    smoothScroll(){
+      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if(currentScroll > 0){
+        window.requestAnimationFrame(this.smoothScroll);
+        window.scrollTo(0,currentScroll - (currentScroll/5));
+      }
     }
 }
