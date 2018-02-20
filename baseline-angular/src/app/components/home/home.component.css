@@ -9,7 +9,7 @@
 }
 
 .custom-background:after {
-  /* position: absolute; */
+  position: absolute;
   background: radial-gradient(circle, transparent 50%, black 150%);
 }
 
@@ -23,7 +23,7 @@
     height: 115px;
     width: 100%;
     padding-bottom: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 60px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -68,9 +68,9 @@ p{
 }
 
 .parallax-container {
-  width: 80%;
+  width: 70%;
   /* Top right bottom left */
-  margin: 0px 10% 0px 10%;
+  margin: 0px 15% 0px 15%;
 }
 
 /* Other parallax code */
@@ -78,7 +78,7 @@ p{
     /* Set a specific height */
     width: 48%;
     height: 275px;
-    margin: 4px;
+    margin: 7px;
     float: left;
 
     display: inline-block;
@@ -105,7 +105,7 @@ p{
 }
 
 /* MOBILE: */
-@media (max-width: 978px) {
+@media (max-width: 999px) {
   /* Change to one square parallaxes when screen is small. */
   .parallax {
       /* Set a specific height, change margin small amount. */
