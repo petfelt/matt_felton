@@ -105,7 +105,7 @@ p{
 }
 
 /* MOBILE: */
-@media (max-width: 999px) {
+@media (max-width: 1025px) {
   /* Change to one square parallaxes when screen is small. */
   .parallax {
       /* Set a specific height, change margin small amount. */
