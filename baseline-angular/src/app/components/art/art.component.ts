@@ -87,7 +87,7 @@ export class ArtComponent implements OnInit {
       var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
       if(currentScroll > 0){
         window.requestAnimationFrame(this.smoothScroll);
-        window.scrollTo(0,currentScroll - (currentScroll/5));
+        window.scrollTo(0,0);
       }
     }
 }
