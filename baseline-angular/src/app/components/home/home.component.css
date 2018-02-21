@@ -24,12 +24,6 @@
     width: 100%;
     padding-bottom: 5px;
     margin-bottom: 60px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .title-box{
   display: table-cell;
@@ -84,7 +78,7 @@ p{
     display: inline-block;
     text-align: center;
 
-    /* Create the parallax scrolling effect */
+    /* Create the parallax scrolling effect on desktop */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -96,7 +90,8 @@ p{
     /* Show click pointer */
     cursor: pointer;
 
-    /* Make opacity animations work. */
+    /* Make darkening animations work. */
+    -webkit-filter: brightness(100%);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -108,19 +103,14 @@ p{
 @media (max-width: 1025px) {
   /* Change to one square parallaxes when screen is small. */
   .parallax {
-      /* Set a specific height, change margin small amount. */
+      /* Make width take whole square space, so one square per line. */
       width: 100%;
-      margin: 6px;
-      background-color: rgb(56,56,61);
   }
 }
 
-.parallax-photo {
-    background-image: url("/assets/home/music-grid.jpg");
-    opacity: 1;
-}
-.parallax-photo:hover{
-  opacity: 0.8;
+.parallax:hover{
+  /* So squares darken when hovered over. */
+  -webkit-filter: brightness(82%);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -128,46 +118,14 @@ p{
   transition: all 0.5s ease;
 }
 
-
-.parallax-art {
-    background-image: url("/assets/home/music-grid.jpg");
-    opacity: 1;
-}
-.parallax-art:hover{
-  opacity: 0.8;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
+/* .parallax-photo & parallax-art are set with ngStyle on the html document. */
 
 .parallax-music {
-    /* The image used */
+    /* The background image used */
     background-image: linear-gradient( rgba(56,56,61,.4), rgba(56,56,61,.4) ), url("/assets/home/music-grid.jpg");
-    opacity: 1;
 }
-.parallax-music:hover{
-  opacity: 0.8;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 
 .parallax-software {
-    /* The image used */
+    /* The background image used */
     background-image: linear-gradient( rgba(56,56,61,.4), rgba(56,56,61,.4) ), url("/assets/home/xpendx-grid.jpg");
-    opacity: 1;
-}
-.parallax-software:hover{
-  opacity: 0.8;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
