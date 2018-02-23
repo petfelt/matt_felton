@@ -1,7 +1,8 @@
 .custom-background {
   background-color: rgb(31,28,31);
-  background: url("/assets/home/home-background.jpg") space;
-  /* background-repeat: space; */
+  background-image: url("/assets/home/home-background.jpg");
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/home/home-background.jpg', sizingMethod='scale')";
+  background-repeat: space;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
