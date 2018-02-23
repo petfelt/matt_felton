@@ -1,11 +1,15 @@
 .custom-background {
   background-color: rgb(31,28,31);
-  background-image: url("/assets/home/home-background.jpg");
-  background-repeat: space;
+  background: url("/assets/home/home-background.jpg") space;
+  /* background-repeat: space; */
   background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
-  padding-bottom: 160px;
-  margin-bottom: -60px;
+  padding-bottom: 170px;
+  margin-bottom: -70px;
+  height: auto;
 }
 
 .custom-background:after {
