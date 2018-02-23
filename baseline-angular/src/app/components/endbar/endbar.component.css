@@ -11,6 +11,7 @@ p{
   color: rgb(160, 160, 160);
   margin-top: 10px;
   margin-bottom: 30px;
+  cursor: default;
 }
 .icon{
   display: inline-block;
