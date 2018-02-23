@@ -116,8 +116,8 @@ p{
 
 .parallax:hover{
   /* So squares animate when hovered over. */
-  opacity: 0.8;
-  /* -webkit-filter: brightness(100%); */
+  opacity: 0.91;
+  -webkit-filter: brightness(80%);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
