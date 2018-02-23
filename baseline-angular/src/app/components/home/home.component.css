@@ -10,7 +10,7 @@
   box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
   padding-bottom: 170px;
   margin-bottom: -70px;
-  height: 3000px;
+  height: auto;
 }
 
 .custom-background:after {
