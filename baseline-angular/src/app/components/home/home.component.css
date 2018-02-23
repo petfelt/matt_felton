@@ -1,5 +1,5 @@
 .custom-background {
-  background: url(/assets/home/home-background.jpg) space transparent;
+  background-image: url("/assets/home/home-background.jpg");
   background-repeat: space;
   background-size: cover;
   -moz-background-size: cover;
@@ -11,7 +11,7 @@
   height: 100%;
   width: 100%;
   display: block;
-  /* background-color: rgb(31,28,31); */
+  background-color: rgb(31,28,31);
 }
 
 .custom-background:after {
