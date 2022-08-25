@@ -1,8 +1,6 @@
 # matt_felton
 A website built for my father using the MEAN stack and Cloudinary. Includes sections for his art, photography, music, & software. Also includes biography, news, and social media links. Currently a prototype. Soon to add new photo browsing features to include better mobile navigation.
 
-### [Live Link.](http://www.matthewfelton.com/)
-
 ![Preview Of Photography Page](https://github.com/petfelt/matt_felton/blob/master/media/preview1.png)
 
 ## Code Snippet
